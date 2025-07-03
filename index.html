@@ -5,77 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나를 소개합니다</title>
     <style>
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: #f5f5f5;
             color: #111;
-            text-align: center;
         }
+        /* 헤더 스타일 */
         header {
             background-color: #000;
-            color: #fff;
-            padding: 20px 0;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         header h1 {
+            color: #fff;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ccc;
+        }
+        /* 메인 배너 스타일 */
+        .main-banner {
+            background-color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .main-banner h2 {
             font-size: 48px;
             font-weight: bold;
-            margin: 0;
-            letter-spacing: 2px;
+            margin-bottom: 20px;
         }
-        .intro {
-            padding: 50px 20px;
-            background-color: #fff;
-        }
-        .intro p {
+        .main-banner p {
             font-size: 20px;
-            max-width: 600px;
-            margin: 20px auto;
-            line-height: 1.5;
             color: #333;
+            max-width: 600px;
+            margin: 0 auto;
         }
-        footer {
-            background-color: #000;
-            color: #fff;
+        /* 소개 섹션 스타일 */
+        .intro-section {
             padding: 40px 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .intro-section h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .intro-section p {
+            font-size: 18px;
+            color: #444;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        /* 브랜드 메시지 섹션 */
+        .brand-messages {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
+            padding: 40px 20px;
+            background-color: #000;
+            color: #fff;
         }
-        .footer-quote {
+        .brand-message {
             flex: 1 1 200px;
             font-size: 16px;
             font-style: italic;
-            opacity: 0.8;
+            text-align: center;
+            padding: 10px;
         }
+        /* 푸터 스타일 */
+        footer {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+        /* 반응형 디자인 */
         @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px 20px;
+            }
             header h1 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 14px;
+            }
+            .main-banner h2 {
                 font-size: 32px;
             }
-            .intro p {
+            .main-banner p {
                 font-size: 16px;
             }
-            .footer-quote {
+            .intro-section h3 {
+                font-size: 24px;
+            }
+            .intro-section p {
+                font-size: 16px;
+            }
+            .brand-message {
                 font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- 헤더 섹션 -->
     <header>
         <h1>나를 소개합니다</h1>
+        <nav>
+            <a href="#">소개</a>
+            <a href="#">포트폴리오</a>
+            <a href="#">연락처</a>
+        </nav>
     </header>
-    <section class="intro">
-        <p>안녕하세요! 이곳은 저의 이야기를 담은 개인 페이지입니다. 제 열정과 꿈을 공유하며 여러분과 연결되고 싶습니다.</p>
-        <p>다른 페이지에서 저에 대한 더 많은 이야기를 만나보세요!</p>
+    <!-- 메인 배너 섹션 -->
+    <section class="main-banner">
+        <h2>환영합니다!</h2>
+        <p>이곳은 저의 열정과 이야기를 담은 공간입니다. 함께 제 여정을 탐험해보세요!</p>
     </section>
+    <!-- 소개 섹션 -->
+    <section class="intro-section">
+        <h3>저에 대해</h3>
+        <p>저는 꿈을 향해 달리는 사람입니다. 이 페이지에서는 제 목표, 열정, 그리고 여러분과 나누고 싶은 이야기를 소개합니다. 다른 페이지에서 더 많은 콘텐츠를 확인해보세요!</p>
+    </section>
+    <!-- 브랜드 메시지 섹션 -->
+    <section class="brand-messages">
+        <div class="brand-message">"꿈은 이루어진다."</div>
+        <div class="brand-message">"한 걸음씩, 목표를 향해."</div>
+        <div class="brand-message">"당신의 가능성을 믿어."</div>
+        <div class="brand-message">"지금이 시작이다."</div>
+    </section>
+    <!-- 푸터 섹션 -->
     <footer>
-        <div class="footer-quote">"당신의 꿈을 향해 나아가세요."</div>
-        <div class="footer-quote">"한계는 스스로 정하는 것."</div>
-        <div class="footer-quote">"오늘의 노력, 내일의 성공."</div>
-        <div class="footer-quote">"Just Be You."</div>
+        <p>&copy; 2025 나를 소개합니다. All rights reserved.</p>
     </footer>
 </body>
 </html>
