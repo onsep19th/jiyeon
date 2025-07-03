@@ -1,11 +1,84 @@
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<title>hello</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나를 소개합니다</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #111;
+            text-align: center;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+        }
+        header h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .intro {
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+        .intro p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            line-height: 1.5;
+            color: #333;
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .footer-quote {
+            flex: 1 1 200px;
+            font-size: 16px;
+            font-style: italic;
+            opacity: 0.8;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 32px;
+            }
+            .intro p {
+                font-size: 16px;
+            }
+            .footer-quote {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-<h1>내 생에 첫 홈페이지</h1>
+    <header>
+        <h1>나를 소개합니다</h1>
+    </header>
+    <section class="intro">
+        <p>안녕하세요! 이곳은 저의 이야기를 담은 개인 페이지입니다. 제 열정과 꿈을 공유하며 여러분과 연결되고 싶습니다.</p>
+        <p>다른 페이지에서 저에 대한 더 많은 이야기를 만나보세요!</p>
+    </section>
+    <footer>
+        <div class="footer-quote">"당신의 꿈을 향해 나아가세요."</div>
+        <div class="footer-quote">"한계는 스스로 정하는 것."</div>
+        <div class="footer-quote">"오늘의 노력, 내일의 성공."</div>
+        <div class="footer-quote">"Just Be You."</div>
+    </footer>
 </body>
-</html> 
+</html>
 
 
 
